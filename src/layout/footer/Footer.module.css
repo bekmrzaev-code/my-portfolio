@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 48px 32px;
+    border-top: 4px solid var(--secondary-color);
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.links ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}

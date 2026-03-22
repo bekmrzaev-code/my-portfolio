@@ -1,0 +1,65 @@
+/* ─── Base ─── */
+.base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: var(--radius-full);
+    font-family: var(--font-main);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+/* ─── Variants ─── */
+.primary {
+    background: var(--primary-color);
+    color: var(--background-color);
+}
+
+.primary:hover {
+    opacity: 0.85;
+}
+
+.outline {
+    background: transparent;
+    color: var(--color-primary);
+    border: 1.5px solid var(--color-primary);
+}
+
+.outline:hover {
+    background: var(--color-primary);
+    color: var(--color-bg);
+}
+
+.ghost {
+    background: transparent;
+    color: var(--color-primary);
+}
+
+.ghost:hover {
+    opacity: 0.7;
+}
+
+.link {
+    background: transparent;
+    color: var(--color-primary);
+    border-radius: 0;
+    padding: 0;
+}
+
+.link:hover {
+    opacity: 0.7;
+}
+
+/* ─── Sizes ─── */
+.size_v1 {
+    padding: var(--space-2) var(--space-6);
+    font-size: var(--text-v1);
+}
+
+.size_v2 {
+    padding: var(--space-3) var(--space-8);
+    font-size: var(--text-v2);
+}

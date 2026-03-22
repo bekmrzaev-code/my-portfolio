@@ -1,0 +1,92 @@
+.base {
+    line-height: 1.5;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+
+.base a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ─── Variants ─── */
+.h1 {
+    font-size: var(--text-v2);
+    line-height: 1.1;
+}
+
+.h2 {
+    font-size: var(--text-v2);
+    line-height: 1.1;
+}
+
+.h3 {
+    font-size: var(--text-m2);
+    line-height: 1.1;
+}
+
+.h4 {
+    font-size: var(--text-v1);
+}
+
+.h5 {
+    font-size: var(--text-v1);
+}
+
+.h6 {
+    font-size: var(--text-m1);
+}
+
+.p {
+    font-size: var(--text-v1);
+}
+
+.span {
+    font-size: inherit;
+}
+
+/* ─── Size overrides ─── */
+.size_m1 {
+    font-size: var(--text-m1);
+}
+
+.size_v1 {
+    font-size: var(--text-v1);
+}
+
+.size_m2 {
+    font-size: var(--text-m2);
+}
+
+.size_v2 {
+    font-size: var(--text-v2);
+}
+
+.size_v3 {
+    font-size: var(--text-v3);
+}
+
+.size_biggest {
+    font-size: var(--text-biggest);
+}
+
+/* ─── Type ─── */
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}

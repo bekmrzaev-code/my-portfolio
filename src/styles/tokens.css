@@ -1,0 +1,78 @@
+/* FONT IMPORTS */
+@font-face {
+    font-family: 'Epilogue';
+    src: url('fonts/Epilogue/Epilogue-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('fonts/Epilogue/Epilogue-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+    font-weight: 300 700;
+    font-style: normal;
+}
+
+/* FONTS */
+:root {
+    --font-sans: 'Epilogue', sans-serif;
+    --font-mono: 'Space Grotesk', monospace;
+
+    --weight-thin: 100;
+    --weight-extralight: 200;
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+    --weight-extrabold: 800;
+    --weight-black: 900;
+}
+
+/* COLORS */
+:root {
+    /* PRIMITIVES */
+    --color-electric-lime: #AFEE00;
+    --color-soft-violet: #C97CFF;
+    --color-aqua-glow: #8FF5FF;
+    --color-mint-cream: #E9FFBA;
+    --background-color: #0E0E0E;
+    --primary-color: #E9FFBA;
+    --secondary-color: #777575;
+    --section-bg: #2c2c2c60;
+    --border-bg: #494847;
+    --soft-section-bg: #262626;
+    --color-white: #FFFFFF;
+
+    /* SEMANTIC */
+    --color-primary: var(--color-electric-lime);
+}
+
+/* TYPOGRAPHY */
+:root {
+    --text-m1: 14px;
+    --text-v1: 16px;
+    --text-m2: 20px;
+    --text-v2: 30px;
+    --text-v3: 36px;
+    --text-biggest: 160px;
+}
+
+/* SPACING */
+:root {
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-7: 28px;
+    --space-8: 32px;
+}

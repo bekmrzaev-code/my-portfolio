@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--section-bg);
+    padding: 40px;
+    width: fit-content;
+    position: relative; 
+    border: 2px solid var(--border-bg);
+}
+
+.sections {
+    display: flex;
+    gap: 12px;
+    margin-top: 32px;
+
+    li {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 8px;
+        background-color: var(--soft-section-bg);
+        padding: 8px 16px;
+        border-left: 4px solid var(--color-mint-cream);
+    }
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.icon {
+    position: absolute;
+    padding: 16px;
+    top: 0;
+    right: 0;
+}
+
+
