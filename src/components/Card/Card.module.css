@@ -1,0 +1,22 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 98px 32px;
+    background-color: var(--section-bg);
+    border-bottom:8px solid var(--color-soft-violet);
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 100px;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}

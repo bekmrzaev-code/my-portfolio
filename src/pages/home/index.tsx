@@ -1,5 +1,6 @@
 // import React from 'react'
 import { CtaCard, IntroCard, T } from '../../components'
+import Card from '../../components/Card'
 import styles from './Home.module.css'
 
 const HomePage = () => {
@@ -15,26 +16,33 @@ const HomePage = () => {
           </T>
         </div>
         <div className={styles.cards}>
-          <IntroCard 
-            sections={[
-              { label: 'RUST / WASM', color: '#8FF5FF' },
-              { label: 'NEXT.JS', color: '#C97CFF' },
-              { label: 'TYPESCRIPT', color: '#E9FFBA' },
-            ]}
-            icon={<img src="/icons/terminal.svg" alt="Terminal Icon" />}
+            <IntroCard 
+              sections={[
+                { label: 'RUST / WASM', color: '#8FF5FF' },
+                { label: 'NEXT.JS', color: '#C97CFF' },
+                { label: 'TYPESCRIPT', color: '#E9FFBA' },
+              ]}
+              icon={<img src="/icons/terminal.svg" alt="Terminal Icon" />}
+            >
+              I'm a Fullstackk Architect based in the void. I build high performance interfaces that bridge the gap between human intution and machine efficiency.
+            </IntroCard>
+            <CtaCard
+              link='/projects'
+              linkText='EXPLORE MY WORK'
+              icon="/icons/arrow-right.svg"  
+              bgColor='#E9FFBA'
+              shadowColor='#AA30FA'
+              textColor='#2C2C2C'
+            >
+              READY TO SEE THE RESULTS?
+            </CtaCard>
+        </div>
+        <div className={styles.cards}>
+          <Card
+            text='OPERATIONAL STATUS'
           >
-            I'm a Fullstackk Architect based in the void. I build high performance interfaces that bridge the gap between human intution and machine efficiency.
-          </IntroCard>
-          <CtaCard
-            link='/projects'
-            linkText='EXPLORE MY WORK'
-            icon="/icons/arrow-right.svg"  
-            bgColor='#E9FFBA'
-            shadowColor='#AA30FA'
-            textColor='#2C2C2C'
-          >
-            READY TO SEE THE RESULTS?
-          </CtaCard>
+            AVAILABLE FOR HIRE
+          </Card>
         </div>
       </div>
       <div className={styles.bottom}>

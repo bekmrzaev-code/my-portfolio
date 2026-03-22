@@ -9,9 +9,9 @@
 
 .link {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-decoration: none;
     color: inherit;
-    gap: 10px;
+    width: 100%;
 }
