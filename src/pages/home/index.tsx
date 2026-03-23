@@ -1,4 +1,5 @@
 // import React from 'react'
+import { Link } from 'react-router'
 import { CtaCard, IntroCard, T } from '../../components'
 import Card from '../../components/Card'
 import styles from './Home.module.css'
@@ -6,7 +7,7 @@ import styles from './Home.module.css'
 const HomePage = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.top}>   
+      <div className={styles.hero}>   
         <div>
           <T variant="p" size="m1" font='mono' color='violet'>
             Creative Engineering // System Architecture
@@ -43,9 +44,27 @@ const HomePage = () => {
           >
             AVAILABLE FOR HIRE
           </Card>
+          <Link to='/project/01' className={styles.visualElement}>
+              <T>SYSTEM_LOG: 0xFF12</T>
+            <img src="/images/image.png" alt="project" />
+          </Link>
         </div>
       </div>
-      <div className={styles.bottom}>
+      <div className={styles.projects}>
+        <div className={styles.text}>
+          <div className={styles.title}>
+          <T color='primary' weight='black' font='sans' size='v5'>RECENT </T>
+          <T color='secondary' weight='black' font='sans' size='v5'>ARTIFACTS</T>
+          </div>
+          <T color='secondary' weight='regular' size='m1' className={styles.desc}>
+            A COLLECTION OF PROJECTS WHERE
+            PERFORMANCE MEETS UNCONVENTIONAL
+            DESIGN.
+          </T>
+        </div>
+        <div>
+          
+        </div>
       </div>
     </div>
   )

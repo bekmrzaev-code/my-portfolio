@@ -1,12 +1,61 @@
-.top {
+.container {
+    width: 100%;
+}
+
+.hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 100px 24px;
+    width: 100%;
 }
 
 .cards {
     display: flex;
     margin-bottom: 24px;
     gap: 24px;
+    width: 100%;
+}
+
+.visualElement {
+    display: flex;
+    position: relative;
+    height: 270px;
+    width: 73%;
+    overflow: hidden;
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+
+    p {
+        display: flex;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+    }
+}
+
+.projects {
+    padding: 80px 24px;
+
+    .text {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        .title {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .desc {
+            max-width: 256px;
+            text-align: right;
+        }
+    }
 }
