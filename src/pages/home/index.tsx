@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import { CtaCard, IntroCard, T } from '../../components'
 import Card from '../../components/Card'
 import styles from './Home.module.css'
+import ProjectCard from '../../components/projectCard'
 
 const HomePage = () => {
   return (
@@ -62,8 +63,25 @@ const HomePage = () => {
             DESIGN.
           </T>
         </div>
-        <div>
-          
+        <div className={styles.projectsGrid}>
+          <ProjectCard
+            desc='REAL-TIME BIOMETRIC DATA VIZUALIZATION ENGINE'
+            year='2024'
+            photo='/images/projectOne.jpg'
+            color='violet'
+            link='/projectOne'
+          >
+            NEURAL_DASHBOARD
+          </ProjectCard>
+          <ProjectCard
+            desc='MINIMALIST TERMINAL-FIRST PORTFOLIO SYSTEM'
+            year='2023'
+            color='aqua'
+            photo='/images/projectOne.jpg'
+            link='/projectTwo'
+          >
+            VOID_OS
+          </ProjectCard>
         </div>
       </div>
     </div>

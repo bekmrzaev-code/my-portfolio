@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    width: 592px;
+    text-decoration: none;
+    color: inherit;
+
+    img {
+        height: 332px;
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}

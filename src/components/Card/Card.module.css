@@ -4,6 +4,7 @@
     padding: 98px 32px;
     background-color: var(--section-bg);
     border-bottom:8px solid var(--color-soft-violet);
+    width: 372px;
 }
 
 .content {
