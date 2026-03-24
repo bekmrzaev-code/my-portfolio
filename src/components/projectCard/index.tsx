@@ -1,7 +1,7 @@
 import React from 'react'
 import { T } from '..'
-import styles from './projectCard.module.css'
 import { Link } from 'react-router'
+import styles from './projectCard.module.css'
 
 interface projectCardProps {
   children: React.ReactNode
