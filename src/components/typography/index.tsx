@@ -2,7 +2,7 @@ import React, { type JSX } from 'react'
 import styles from './Typography.module.css'
 
 type Variant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
-type Size = 'v1' | 'v2' | 'm1' | 'm2' |  'v3' | 'v5' | 'biggest';
+type Size = 'v1' | 'v2' | 'm1' | 'm2' |  'v3' | 'v5' | 'v6' | 'm3' | 'biggest';
 type Weight =
     | 'thin'
     | 'extralight'

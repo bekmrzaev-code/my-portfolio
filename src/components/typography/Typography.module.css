@@ -57,6 +57,10 @@
     font-size: var(--text-m2);
 }
 
+.size_m3 {
+    font-size: var(--text-m3);
+}
+
 .size_v2 {
     font-size: var(--text-v2);
 }
@@ -67,6 +71,10 @@
 
 .size_v5 {
     font-size: var(--text-v5);
+}
+
+.size_v6 {
+    font-size: var(--text-v6);
 }
 
 .size_biggest {
