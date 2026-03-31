@@ -10,9 +10,12 @@ const HomePage = () => {
     <div className={styles.container}>
       <div className={styles.hero}>   
         <div>
-          <T variant="p" size="m1" font='mono' color='violet'>
-            Creative Engineering // System Architecture
-          </T>
+          <div className={styles.title}>
+            <span className={styles.line}></span>
+            <T variant="p" size="m1" font='mono' color='violet'>
+              Creative Engineering // System Architecture
+            </T>
+          </div>
           <T variant='h1' size='biggest' font='sans' color='primary' weight='black'> 
             CRAFTING DIGITAL CHAOS INTO CODE
           </T>

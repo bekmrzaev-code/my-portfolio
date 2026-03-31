@@ -13,7 +13,7 @@ type Weight =
     | 'bold'
     | 'extrabold'
     | 'black';
-type ColorToken = 'primary' | 'secondary' | 'lime' | 'violet' | 'aqua' | 'mint' | 'white';
+type ColorToken = 'primary' | 'secondary' | 'lime' | 'violet' | 'aqua' | 'mint' | 'white' | 'darkGray';
 type FontToken = 'sans' | 'mono'
 
 const colorMap: Record<ColorToken, string> = {
@@ -24,6 +24,7 @@ const colorMap: Record<ColorToken, string> = {
     aqua: 'var(--color-aqua-glow)',
     mint: 'var(--color-mint-cream)',
     white: 'var(--color-white)',
+    darkGray: 'var(--section-bg)'
 }
 
 const weightMap: Record<Weight, string> = {

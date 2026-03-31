@@ -8,6 +8,12 @@
     align-items: center;
     padding: 100px 24px;
     width: 100%;
+
+    .title {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
 }
 
 .cards {
@@ -64,4 +70,10 @@
 .projectsGrid {
     display: flex;
     justify-content: space-between;
+}
+
+.line {
+    width: 42px;
+    height: 2px;
+    background-color: #C97CFF;
 }
