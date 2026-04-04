@@ -20,12 +20,23 @@
 }
 
 .techStack {
-    padding: 24px 76px;
+    padding: 0px 24px;
 
     .title {
         display: flex;
         align-items: flex-end;
         gap: 16px;
+        margin-bottom: 48px;
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        
+        .skillBar {
+            display: flex;
+            gap: 48px;
+        }
     }
 }
 
