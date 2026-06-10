@@ -12,10 +12,12 @@ interface projectCardProps {
   link: string
 }
 
-const ProjectCard: React.FC<projectCardProps> = ({ children, year, desc, photo, color, link}) => {
+const ProjectCard: React.FC<projectCardProps> = ({ children, year, desc, photo, color, link }) => {
   return (
     <Link to={link} className={styles.container}>
-      <img src={photo} alt='projectPhoto'></img>
+      <div className={styles.imageWrapper}>
+        <img src={photo} alt='projectPhoto' />
+      </div>
       <div className={styles.content}>
         <div className={styles.text}>
           <T weight='black' size='v3' font='sans'>{children}</T>

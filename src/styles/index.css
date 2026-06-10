@@ -4,8 +4,42 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'EpilogueBlack', sans-serif;
-  color: var(--text-color);
+  font-family: 'Epilogue', sans-serif;
   background-color: var(--background-color);
+  overflow-x: hidden;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body,
+  a,
+  button {
+    cursor: none;
+  }
+}
+
+::selection {
+  background-color: var(--color-soft-violet);
+  color: #0e0e0e;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0e0e0e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-electric-lime);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-soft-violet);
 }

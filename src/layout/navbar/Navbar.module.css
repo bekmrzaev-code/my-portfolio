@@ -4,11 +4,20 @@
     justify-content: space-between;
     padding: 24px 18px;
     border-bottom: 4px solid var(--primary-color);
+    will-change: transform;
 
     a {
         text-decoration: none;
         color: inherit;
     }
+}
+
+.logo a {
+    transition: opacity 0.2s ease;
+}
+
+.logo a:hover {
+    opacity: 0.75;
 }
 
 .navLinks ul {
@@ -17,4 +26,29 @@
     align-items: center;
     list-style: none;
     gap: 32px;
+}
+
+.navLinks li {
+    position: relative;
+}
+
+.navLinks li a {
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.2s ease;
+}
+
+.navLinks li a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.navLinks li a:hover::after {
+    width: 100%;
 }

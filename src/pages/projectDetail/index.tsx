@@ -1,7 +1,9 @@
+import { useRef, useEffect } from 'react'
 import { Link, useParams, useLocation } from 'react-router'
 import { T } from '../../components'
 import Border from '../../components/border'
 import styles from './ProjectDetail.module.css'
+import { gsap, ScrollTrigger } from '../../lib/gsap'
 
 interface ProjectData {
   name: string
@@ -96,8 +98,55 @@ const ProjectDetailPage = ({ projectId }: ProjectDetailPageProps) => {
 
   const project = projectsData[resolvedId] ?? projectsData['projectOne']
 
+  const containerRef = useRef<HTMLDivElement>(null)
+  const imageRef = useRef<HTMLDivElement>(null)
+  const contentRef = useRef<HTMLDivElement>(null)
+  const detailsRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({ delay: 0.15 })
+
+      tl.from(imageRef.current, {
+        x: -60,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out',
+      })
+
+      if (contentRef.current?.children.length) {
+        tl.from(Array.from(contentRef.current.children), {
+          x: 60,
+          opacity: 0,
+          duration: 0.85,
+          stagger: 0.1,
+          ease: 'power3.out',
+        }, '-=0.7')
+      }
+
+      if (detailsRef.current?.children.length) {
+        gsap.from(Array.from(detailsRef.current.children), {
+          scrollTrigger: {
+            trigger: detailsRef.current,
+            start: 'top 80%',
+          },
+          y: 60,
+          opacity: 0,
+          duration: 0.85,
+          stagger: 0.2,
+          ease: 'power3.out',
+        })
+      }
+    }, containerRef)
+
+    return () => {
+      ctx.revert()
+      ScrollTrigger.getAll().forEach(t => t.kill())
+    }
+  }, [resolvedId])
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={containerRef}>
       <div className={styles.breadcrumb}>
         <Link to='/projects'>
           <T font='mono' size='m1' color='secondary'>← BACK_TO_PROJECTS</T>
@@ -105,10 +154,10 @@ const ProjectDetailPage = ({ projectId }: ProjectDetailPageProps) => {
       </div>
 
       <div className={styles.hero}>
-        <div className={styles.heroImage}>
+        <div className={styles.heroImage} ref={imageRef}>
           <img src={project.photo} alt={project.name} />
         </div>
-        <div className={styles.heroContent}>
+        <div className={styles.heroContent} ref={contentRef}>
           <div className={styles.meta}>
             <Border color={statusColor(project.status)} type='background'>{project.status}</Border>
             <Border color='#777575' type='border'>{project.year}</Border>
@@ -116,13 +165,19 @@ const ProjectDetailPage = ({ projectId }: ProjectDetailPageProps) => {
           <T variant='h1' size='v5' font='sans' weight='black'>{project.name}</T>
           <T font='mono' size='m2' color='secondary' weight='regular'>{project.desc}</T>
           <div className={styles.actions}>
-            <a href={project.live} target='_blank' rel='noreferrer'
+            <a
+              href={project.live}
+              target='_blank'
+              rel='noreferrer'
               className={styles.actionPrimary}
               style={{ backgroundColor: project.accentColor }}
             >
               <T font='sans' weight='black' size='m1' color='#0E0E0E'>LIVE_DEMO</T>
             </a>
-            <a href={project.github} target='_blank' rel='noreferrer'
+            <a
+              href={project.github}
+              target='_blank'
+              rel='noreferrer'
               className={styles.actionOutline}
               style={{ borderColor: project.accentColor }}
             >
@@ -132,7 +187,7 @@ const ProjectDetailPage = ({ projectId }: ProjectDetailPageProps) => {
         </div>
       </div>
 
-      <div className={styles.details}>
+      <div className={styles.details} ref={detailsRef}>
         <div className={styles.section}>
           <div className={styles.sectionTitle}>
             <T size='v3' weight='black'>PROJECT_OVERVIEW</T>

@@ -1,6 +1,8 @@
+import { useRef, useEffect } from 'react'
 import { T } from '../../components'
 import Border from '../../components/border'
 import styles from './Streak.module.css'
+import { gsap, ScrollTrigger } from '../../lib/gsap'
 
 const getColor = (count: number): string => {
   if (count === 0) return 'var(--section-bg)'
@@ -40,18 +42,80 @@ const recentActivity = [
 ]
 
 const StreakPage = () => {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const heroRef = useRef<HTMLDivElement>(null)
+  const statsRef = useRef<HTMLDivElement>(null)
+  const heatmapRef = useRef<HTMLDivElement>(null)
+  const logRef = useRef<HTMLDivElement>(null)
+
   const flat = contributions.flat()
   const totalContributions = flat.reduce((s, d) => s + d.count, 0)
-
   let currentStreak = 0
   for (let i = flat.length - 1; i >= 0; i--) {
     if (flat[i].count > 0) currentStreak++
     else break
   }
 
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Hero entry
+      if (heroRef.current?.children.length) {
+        gsap.from(Array.from(heroRef.current.children), {
+          y: 70,
+          opacity: 0,
+          duration: 0.9,
+          stagger: 0.12,
+          ease: 'power3.out',
+          delay: 0.15,
+        })
+      }
+
+      // Stats stagger on scroll
+      gsap.from(Array.from(statsRef.current?.children ?? []), {
+        scrollTrigger: { trigger: statsRef.current, start: 'top 82%' },
+        y: 50,
+        opacity: 0,
+        duration: 0.7,
+        stagger: 0.1,
+        ease: 'power3.out',
+      })
+
+      // Heatmap: columns cascade in left → right
+      const weekCols = heatmapRef.current?.querySelectorAll('[data-week-col]')
+      if (weekCols?.length) {
+        gsap.from(Array.from(weekCols), {
+          scrollTrigger: { trigger: heatmapRef.current, start: 'top 80%' },
+          opacity: 0,
+          x: -12,
+          duration: 0.35,
+          stagger: 0.018,
+          ease: 'power2.out',
+        })
+      }
+
+      // Log entries stagger
+      const logEntries = logRef.current?.querySelectorAll('[data-log-entry]')
+      if (logEntries?.length) {
+        gsap.from(Array.from(logEntries), {
+          scrollTrigger: { trigger: logRef.current, start: 'top 82%' },
+          x: -40,
+          opacity: 0,
+          duration: 0.7,
+          stagger: 0.1,
+          ease: 'power3.out',
+        })
+      }
+    }, containerRef)
+
+    return () => {
+      ctx.revert()
+      ScrollTrigger.getAll().forEach(t => t.kill())
+    }
+  }, [])
+
   return (
-    <div className={styles.container}>
-      <div className={styles.hero}>
+    <div className={styles.container} ref={containerRef}>
+      <div className={styles.hero} ref={heroRef}>
         <Border color='#8FF5FF' type='background'>ACTIVITY_LOG</Border>
         <T variant='h1' size='v6' font='sans' weight='black'>CODE_STREAK</T>
         <T font='mono' size='m3' color='secondary' weight='regular'>
@@ -59,7 +123,7 @@ const StreakPage = () => {
         </T>
       </div>
 
-      <div className={styles.stats}>
+      <div className={styles.stats} ref={statsRef}>
         <div className={styles.statCard}>
           <T font='mono' size='v5' weight='black' color='primary'>{String(totalContributions)}</T>
           <T font='mono' size='m1' color='secondary'>TOTAL_COMMITS</T>
@@ -84,9 +148,9 @@ const StreakPage = () => {
           <span className={styles.line}></span>
         </div>
         <div className={styles.calendar}>
-          <div className={styles.heatmap}>
+          <div className={styles.heatmap} ref={heatmapRef}>
             {contributions.map((week, wi) => (
-              <div key={wi} className={styles.week}>
+              <div key={wi} className={styles.week} data-week-col>
                 {week.map((day, di) => (
                   <div
                     key={di}
@@ -108,14 +172,14 @@ const StreakPage = () => {
         </div>
       </div>
 
-      <div className={styles.logSection}>
+      <div className={styles.logSection} ref={logRef}>
         <div className={styles.sectionTitle}>
           <T size='v3' weight='black'>RECENT_ACTIVITY</T>
           <span className={styles.line}></span>
         </div>
         <div className={styles.logEntries}>
           {recentActivity.map((entry, i) => (
-            <div key={i} className={styles.logEntry}>
+            <div key={i} className={styles.logEntry} data-log-entry>
               <T font='mono' size='m1' color='secondary'>{entry.time}</T>
               <span className={styles.logConnector} style={{ backgroundColor: entry.color }} />
               <T font='mono' size='v1' weight='bold'>{entry.action}</T>

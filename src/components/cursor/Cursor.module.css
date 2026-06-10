@@ -1,0 +1,32 @@
+.dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background-color: #AFEE00;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    will-change: transform;
+}
+
+.ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #AFEE00;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    will-change: transform;
+}
+
+@media (hover: none) {
+    .dot,
+    .ring {
+        display: none;
+    }
+}
