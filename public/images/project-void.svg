@@ -1,0 +1,117 @@
+<svg viewBox="0 0 592 332" xmlns="http://www.w3.org/2000/svg">
+  <rect width="592" height="332" fill="#080808"/>
+
+  <!-- Scanline overlay -->
+  <defs>
+    <pattern id="scan" width="1" height="3" patternUnits="userSpaceOnUse">
+      <rect width="1" height="1" fill="#000" opacity="0.12"/>
+    </pattern>
+  </defs>
+
+  <!-- Window chrome -->
+  <rect width="592" height="32" fill="#101010"/>
+  <line x1="0" y1="32" x2="592" y2="32" stroke="#8FF5FF" stroke-width="0.5" stroke-opacity="0.3"/>
+  <circle cx="15" cy="16" r="4.5" fill="#FF5F57"/>
+  <circle cx="28" cy="16" r="4.5" fill="#FFBD2E"/>
+  <circle cx="41" cy="16" r="4.5" fill="#27C93F"/>
+  <text x="220" y="21" font-family="monospace" font-size="11" fill="#3A3A3A" text-anchor="middle">void_os — bash — 130×38</text>
+
+  <!-- Terminal content -->
+  <rect x="0" y="32" width="592" height="300" fill="#090909"/>
+
+  <!-- Content lines, each 19px tall starting at y=50 -->
+  <g font-family="monospace" font-size="11">
+
+    <!-- prompt line 1 -->
+    <text y="52">
+      <tspan x="16" fill="#8FF5FF">void@machine</tspan>
+      <tspan fill="#777">:</tspan>
+      <tspan fill="#C97CFF">~/projects/void_os</tspan>
+      <tspan fill="#777">$ </tspan>
+      <tspan fill="#E8E8E8">void --version</tspan>
+    </text>
+    <text y="71"><tspan x="16" fill="#555">void_os v1.4.2 // The terminal-first portfolio system</tspan></text>
+    <text y="90"><tspan x="16" fill="#2A2A2A">────────────────────────────────────────────────</tspan></text>
+
+    <!-- prompt line 2 -->
+    <text y="109">
+      <tspan x="16" fill="#8FF5FF">void@machine</tspan>
+      <tspan fill="#777">:</tspan>
+      <tspan fill="#C97CFF">~/projects/void_os</tspan>
+      <tspan fill="#777">$ </tspan>
+      <tspan fill="#E8E8E8">void init --theme=brutalist --renderer=wasm</tspan>
+    </text>
+    <text y="128">
+      <tspan x="16" fill="#555">&gt; </tspan>
+      <tspan fill="#777">Initializing VOID_OS...</tspan>
+    </text>
+    <text y="147">
+      <tspan x="16" fill="#555">&gt; </tspan>
+      <tspan fill="#777">Loading renderer   </tspan>
+      <tspan fill="#8FF5FF">[██████████]</tspan>
+      <tspan fill="#AFEE00"> 100%</tspan>
+    </text>
+    <text y="166">
+      <tspan x="16" fill="#555">&gt; </tspan>
+      <tspan fill="#777">Compiling WASM     </tspan>
+      <tspan fill="#8FF5FF">[██████████]</tspan>
+      <tspan fill="#AFEE00"> 100%</tspan>
+    </text>
+    <text y="185">
+      <tspan x="16" fill="#555">&gt; </tspan>
+      <tspan fill="#777">Mounting theme     </tspan>
+      <tspan fill="#8FF5FF">[██████████]</tspan>
+      <tspan fill="#AFEE00"> 100%</tspan>
+    </text>
+    <text y="204">
+      <tspan x="16" fill="#AFEE00">✓ </tspan>
+      <tspan fill="#E8E8E8">System ready. </tspan>
+      <tspan fill="#8FF5FF">http://localhost:3000</tspan>
+    </text>
+    <text y="223"><tspan x="16" fill="#2A2A2A">────────────────────────────────────────────────</tspan></text>
+
+    <!-- prompt line 3 -->
+    <text y="242">
+      <tspan x="16" fill="#8FF5FF">void@machine</tspan>
+      <tspan fill="#777">:</tspan>
+      <tspan fill="#C97CFF">~/projects/void_os</tspan>
+      <tspan fill="#777">$ </tspan>
+      <tspan fill="#E8E8E8">void build --target=production --opt=max</tspan>
+    </text>
+    <text y="261">
+      <tspan x="16" fill="#555">&gt; </tspan>
+      <tspan fill="#777">Bundle:  </tspan>
+      <tspan fill="#8FF5FF">42.3 KB</tspan>
+      <tspan fill="#555"> (gzipped: </tspan>
+      <tspan fill="#8FF5FF">14.1 KB</tspan>
+      <tspan fill="#555">)</tspan>
+    </text>
+    <text y="280">
+      <tspan x="16" fill="#555">&gt; </tspan>
+      <tspan fill="#777">WASM:    </tspan>
+      <tspan fill="#C97CFF">128.0 KB</tspan>
+      <tspan fill="#555"> (optimized +brotli)</tspan>
+    </text>
+    <text y="299">
+      <tspan x="16" fill="#AFEE00">✓ </tspan>
+      <tspan fill="#E8E8E8">Build complete </tspan>
+      <tspan fill="#555">(3.4s)</tspan>
+    </text>
+
+    <!-- cursor prompt -->
+    <text y="318">
+      <tspan x="16" fill="#8FF5FF">void@machine</tspan>
+      <tspan fill="#777">:</tspan>
+      <tspan fill="#C97CFF">~/projects/void_os</tspan>
+      <tspan fill="#777">$ </tspan>
+    </text>
+    <!-- Blinking cursor block -->
+    <rect x="252" y="306" width="7" height="14" fill="#8FF5FF" opacity="0.9"/>
+  </g>
+
+  <!-- Scanline overlay -->
+  <rect width="592" height="300" y="32" fill="url(#scan)"/>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="330" width="592" height="2" fill="#8FF5FF" opacity="0.4"/>
+</svg>

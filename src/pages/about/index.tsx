@@ -100,7 +100,7 @@ const About = () => {
           </div>
         </div>
         <div className={styles.rightSide} ref={rightRef}>
-          <img src='/images/hero.png' alt='hero' />
+          <img src='/images/hero.svg' alt='hero' />
         </div>
       </div>
 

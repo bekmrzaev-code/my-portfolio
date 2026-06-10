@@ -1,0 +1,127 @@
+<svg viewBox="0 0 592 332" xmlns="http://www.w3.org/2000/svg">
+  <rect width="592" height="332" fill="#080808"/>
+
+  <!-- Header -->
+  <rect width="592" height="34" fill="#0C0C0C"/>
+  <line x1="0" y1="34" x2="592" y2="34" stroke="#E9FFBA" stroke-width="0.5" stroke-opacity="0.4"/>
+  <circle cx="15" cy="17" r="4.5" fill="#FF5F57"/>
+  <circle cx="28" cy="17" r="4.5" fill="#FFBD2E"/>
+  <circle cx="41" cy="17" r="4.5" fill="#27C93F"/>
+  <text x="57" y="22" font-family="monospace" font-size="11" font-weight="bold" fill="#E9FFBA">BINARY_FORGE</text>
+  <text x="174" y="22" font-family="monospace" font-size="9" fill="#2A2A2A">v0.9.4 // CLI toolchain</text>
+  <text x="488" y="22" font-family="monospace" font-size="9" fill="#E9FFBA">● BUILD OK</text>
+
+  <!-- Left: file tree panel -->
+  <rect x="8" y="42" width="170" height="282" fill="#060606" stroke="#141414" stroke-width="0.5"/>
+  <text x="14" y="57" font-family="monospace" font-size="9" fill="#444">PROJECT_FILES</text>
+  <line x1="8" y1="63" x2="178" y2="63" stroke="#141414" stroke-width="1"/>
+
+  <g font-family="monospace" font-size="9">
+    <text y="78">
+      <tspan x="14" fill="#E9FFBA">▾ </tspan>
+      <tspan fill="#777">binary-forge/</tspan>
+    </text>
+    <text y="93">
+      <tspan x="22" fill="#555">▾ </tspan>
+      <tspan fill="#666">src/</tspan>
+    </text>
+    <text y="108"><tspan x="30" fill="#555">  main.rs</tspan></text>
+    <text y="123"><tspan x="30" fill="#555">  cli.rs</tspan></text>
+    <text y="138"><tspan x="30" fill="#555">  compiler.rs</tspan></text>
+    <text y="153"><tspan x="30" fill="#555">  wasm.rs</tspan></text>
+    <text y="168">
+      <tspan x="22" fill="#555">▾ </tspan>
+      <tspan fill="#666">templates/</tspan>
+    </text>
+    <text y="183"><tspan x="30" fill="#444">  react.tmpl</tspan></text>
+    <text y="198"><tspan x="30" fill="#444">  rust.tmpl</tspan></text>
+    <text y="213"><tspan x="30" fill="#444">  wasm.tmpl</tspan></text>
+    <text y="228">
+      <tspan x="22" fill="#555">▾ </tspan>
+      <tspan fill="#666">tests/</tspan>
+    </text>
+    <text y="243"><tspan x="30" fill="#444">  unit/</tspan></text>
+    <text y="258"><tspan x="30" fill="#444">  integration/</tspan></text>
+    <text x="14" y="278" fill="#555">  Cargo.toml</text>
+    <text x="14" y="293" fill="#555">  Cargo.lock</text>
+    <text x="14" y="308" fill="#555">  forge.config</text>
+  </g>
+
+  <!-- Right: build output -->
+  <rect x="186" y="42" width="398" height="282" fill="#050505" stroke="#141414" stroke-width="0.5"/>
+  <text x="192" y="57" font-family="monospace" font-size="9" fill="#444">BUILD_OUTPUT // forge build --release</text>
+  <line x1="186" y1="63" x2="584" y2="63" stroke="#141414" stroke-width="1"/>
+
+  <g font-family="monospace" font-size="9">
+    <text y="80">
+      <tspan x="192" fill="#555">$</tspan>
+      <tspan fill="#777"> forge build --release --target=wasm32</tspan>
+    </text>
+    <text y="96">
+      <tspan x="192" fill="#E9FFBA">Compiling </tspan>
+      <tspan fill="#555">binary-forge v0.9.4</tspan>
+    </text>
+    <text y="111">
+      <tspan x="192" fill="#555">  Compiling </tspan>
+      <tspan fill="#444">cli.rs</tspan>
+      <tspan fill="#333">                    (1/8)</tspan>
+    </text>
+    <text y="126">
+      <tspan x="192" fill="#555">  Compiling </tspan>
+      <tspan fill="#444">compiler.rs</tspan>
+      <tspan fill="#333">               (2/8)</tspan>
+    </text>
+    <text y="141">
+      <tspan x="192" fill="#555">  Compiling </tspan>
+      <tspan fill="#444">wasm.rs</tspan>
+      <tspan fill="#333">                   (3/8)</tspan>
+    </text>
+    <text y="156">
+      <tspan x="192" fill="#555">  Compiling </tspan>
+      <tspan fill="#444">templates</tspan>
+      <tspan fill="#333">                 (4/8)</tspan>
+    </text>
+    <text y="171">
+      <tspan x="192" fill="#555">  Compiling </tspan>
+      <tspan fill="#444">forge-core</tspan>
+      <tspan fill="#333">                (8/8)</tspan>
+    </text>
+
+    <line x1="186" y1="182" x2="584" y2="182" stroke="#141414" stroke-width="0.5"/>
+
+    <text y="198">
+      <tspan x="192" fill="#AFEE00">   Finished </tspan>
+      <tspan fill="#555">release [optimized] target(s) in </tspan>
+      <tspan fill="#E9FFBA">3.41s</tspan>
+    </text>
+    <text y="213"><tspan x="192" fill="#555">────────────────────────────────────────────</tspan></text>
+    <text y="228">
+      <tspan x="192" fill="#E9FFBA">  Output: </tspan>
+      <tspan fill="#777">target/wasm32/release/forge.wasm</tspan>
+    </text>
+    <text y="243">
+      <tspan x="192" fill="#444">    Size: </tspan>
+      <tspan fill="#8FF5FF">128.0 KB</tspan>
+      <tspan fill="#444"> → brotli: </tspan>
+      <tspan fill="#8FF5FF">38.4 KB</tspan>
+    </text>
+    <text y="258">
+      <tspan x="192" fill="#444">  Binary: </tspan>
+      <tspan fill="#8FF5FF">42.3 KB</tspan>
+      <tspan fill="#444"> → gzip:   </tspan>
+      <tspan fill="#8FF5FF">14.1 KB</tspan>
+    </text>
+  </g>
+
+  <!-- Build stats bar -->
+  <rect x="186" y="278" width="398" height="46" fill="#090909" stroke="#141414" stroke-width="0.5"/>
+  <text x="192" y="293" font-family="monospace" font-size="9" fill="#444">BUILD STATS</text>
+
+  <rect x="192" y="298" width="380" height="6" fill="#141414" rx="2"/>
+  <rect x="192" y="298" width="380" height="6" fill="#E9FFBA" rx="2" opacity="0.7"/>
+  <text x="192" y="318" font-family="monospace" font-size="8" fill="#555">8 crates  |  3.41s  |  0 warnings  |  0 errors</text>
+  <text x="500" y="318" font-family="monospace" font-size="8" fill="#AFEE00">PASS</text>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="330" width="592" height="2" fill="#E9FFBA" opacity="0.4"/>
+</svg>

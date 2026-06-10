@@ -1,0 +1,104 @@
+<svg viewBox="0 0 592 332" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="ng" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#111" stroke-width="0.5"/>
+    </pattern>
+    <filter id="vglow">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="aglow">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="592" height="332" fill="#090909"/>
+  <rect width="592" height="332" fill="url(#ng)"/>
+
+  <!-- Header -->
+  <rect width="592" height="34" fill="#0C0C0C"/>
+  <line x1="0" y1="34" x2="592" y2="34" stroke="#C97CFF" stroke-width="0.5" stroke-opacity="0.5"/>
+  <circle cx="15" cy="17" r="4.5" fill="#FF5F57"/>
+  <circle cx="28" cy="17" r="4.5" fill="#FFBD2E"/>
+  <circle cx="41" cy="17" r="4.5" fill="#27C93F"/>
+  <text x="57" y="22" font-family="monospace" font-size="11" font-weight="bold" fill="#C97CFF" letter-spacing="0.3">NEURAL_DASHBOARD</text>
+  <text x="218" y="22" font-family="monospace" font-size="9" fill="#2E2E2E">v2.4.1 // 4 channels</text>
+  <circle cx="538" cy="17" r="3.5" fill="#AFEE00"/>
+  <text x="547" y="21" font-family="monospace" font-size="9" fill="#AFEE00">RECORDING</text>
+
+  <!-- Waveform area -->
+  <rect x="8" y="42" width="446" height="228" fill="#060606" stroke="#1A1A1A" stroke-width="0.5"/>
+
+  <!-- Channel separators -->
+  <line x1="8" y1="99" x2="454" y2="99" stroke="#141414" stroke-width="1"/>
+  <line x1="8" y1="156" x2="454" y2="156" stroke="#141414" stroke-width="1"/>
+  <line x1="8" y1="213" x2="454" y2="213" stroke="#141414" stroke-width="1"/>
+
+  <!-- Channel label column -->
+  <rect x="8" y="42" width="30" height="228" fill="#070707"/>
+  <line x1="38" y1="42" x2="38" y2="270" stroke="#141414" stroke-width="0.5"/>
+
+  <g font-family="monospace" font-size="7" fill="#3A3A3A">
+    <text x="12" y="58">CH1</text><text x="12" y="68">EEG</text>
+    <text x="12" y="115">CH2</text><text x="12" y="125">ECG</text>
+    <text x="12" y="172">CH3</text><text x="12" y="182">EMG</text>
+    <text x="12" y="229">CH4</text><text x="12" y="239">RESP</text>
+  </g>
+
+  <!-- EEG — high-freq sine wave, violet -->
+  <path d="M 42,70 Q 58,54 74,70 Q 90,86 106,70 Q 122,54 138,70 Q 154,86 170,70 Q 186,54 202,70 Q 218,86 234,70 Q 250,54 266,70 Q 282,86 298,70 Q 314,54 330,70 Q 346,86 362,70 Q 378,54 394,70 Q 410,86 426,70 Q 442,54 454,70"
+    fill="none" stroke="#C97CFF" stroke-width="1.8" filter="url(#vglow)" opacity="0.95"/>
+
+  <!-- ECG — heartbeat spikes, aqua -->
+  <polyline points="42,127 60,127 63,124 65,127 68,104 70,150 72,127 96,127 99,124 101,127 104,104 106,150 108,127 132,127 135,124 137,127 140,104 142,150 144,127 168,127 171,124 173,127 176,104 178,150 180,127 204,127 207,124 209,127 212,104 214,150 216,127 240,127 243,124 245,127 248,104 250,150 252,127 276,127 279,124 281,127 284,104 286,150 288,127 312,127 315,124 317,127 320,104 322,150 324,127 348,127 351,124 353,127 356,104 358,150 360,127 384,127 387,124 389,127 392,104 394,150 396,127 420,127 423,124 425,127 428,104 430,150 432,127 454,127"
+    fill="none" stroke="#8FF5FF" stroke-width="1.8" filter="url(#aglow)" opacity="0.95"/>
+
+  <!-- EMG — noisy signal, mint -->
+  <polyline points="42,185 45,189 48,177 51,192 54,180 57,188 60,175 63,191 66,182 69,188 72,176 75,192 78,181 81,187 84,175 87,193 90,182 93,188 96,176 99,191 102,181 105,187 108,175 111,191 114,182 117,188 120,176 123,192 126,181 129,187 132,175 135,192 138,182 141,188 144,176 147,191 150,181 153,187 156,175 159,192 162,182 165,188 168,175 171,192 174,182 177,188 180,176 183,192 186,181 189,187 192,175 195,192 198,182 201,188 204,175 207,192 210,181 213,187 216,175 219,192 222,182 225,188 228,176 231,192 234,181 237,188 240,175 243,192 246,182 249,188 252,175 255,192 258,182 261,188 264,176 267,192 270,181 273,188 276,175 279,192 282,182 285,188 288,175 291,192 294,181 297,188 300,175 303,192 306,182 309,188 312,176 315,192 318,181 321,188 324,175 327,192 330,182 333,188 336,175 339,192 342,182 345,188 348,176 351,192 354,181 357,188 360,175 363,192 366,182 369,188 372,176 375,192 378,181 381,188 384,175 387,192 390,182 393,188 396,176 399,192 402,181 405,188 408,175 411,192 414,182 417,188 420,176 423,192 426,181 429,188 432,175 435,192 438,182 441,188 444,176 448,192 452,181 454,184"
+    fill="none" stroke="#E9FFBA" stroke-width="1" opacity="0.75"/>
+
+  <!-- RESP — slow sine wave, lime -->
+  <path d="M 42,241 Q 110,222 178,241 Q 246,260 314,241 Q 382,222 450,241 Q 452,240 454,241"
+    fill="none" stroke="#AFEE00" stroke-width="2.2" opacity="0.85"/>
+
+  <!-- Right vitals panel -->
+  <rect x="462" y="42" width="122" height="228" fill="#060606" stroke="#1A1A1A" stroke-width="0.5"/>
+
+  <text x="468" y="58" font-family="monospace" font-size="8" fill="#444" letter-spacing="1">VITALS</text>
+  <line x1="462" y1="64" x2="584" y2="64" stroke="#1A1A1A" stroke-width="1"/>
+
+  <text x="468" y="80" font-family="monospace" font-size="7" fill="#444">HEART_RATE</text>
+  <text x="468" y="100" font-family="monospace" font-size="24" font-weight="bold" fill="#8FF5FF">73</text>
+  <text x="512" y="100" font-family="monospace" font-size="8" fill="#3A3A3A">BPM</text>
+  <line x1="462" y1="112" x2="584" y2="112" stroke="#1A1A1A" stroke-width="1"/>
+
+  <text x="468" y="128" font-family="monospace" font-size="7" fill="#444">SPO2</text>
+  <text x="468" y="148" font-family="monospace" font-size="24" font-weight="bold" fill="#C97CFF">98</text>
+  <text x="506" y="148" font-family="monospace" font-size="8" fill="#3A3A3A">%</text>
+  <line x1="462" y1="160" x2="584" y2="160" stroke="#1A1A1A" stroke-width="1"/>
+
+  <text x="468" y="176" font-family="monospace" font-size="7" fill="#444">TEMP</text>
+  <text x="468" y="196" font-family="monospace" font-size="22" font-weight="bold" fill="#E9FFBA">36.7</text>
+  <text x="534" y="196" font-family="monospace" font-size="8" fill="#3A3A3A">°C</text>
+  <line x1="462" y1="208" x2="584" y2="208" stroke="#1A1A1A" stroke-width="1"/>
+
+  <text x="468" y="224" font-family="monospace" font-size="7" fill="#444">STATUS</text>
+  <text x="468" y="238" font-family="monospace" font-size="9" fill="#AFEE00">● NOMINAL</text>
+  <line x1="462" y1="248" x2="584" y2="248" stroke="#1A1A1A" stroke-width="1"/>
+
+  <text x="468" y="262" font-family="monospace" font-size="7" fill="#444">BUFFER</text>
+  <rect x="468" y="264" width="104" height="4" fill="#1A1A1A" rx="1"/>
+  <rect x="468" y="264" width="70" height="4" fill="#C97CFF" rx="1" opacity="0.7"/>
+
+  <!-- Bottom bar -->
+  <rect x="8" y="278" width="576" height="24" fill="#090909" stroke="#1A1A1A" stroke-width="0.5"/>
+  <text x="16" y="294" font-family="monospace" font-size="8" fill="#3A3A3A">ws://neuro.local:8080</text>
+  <text x="170" y="294" font-family="monospace" font-size="8" fill="#C97CFF">CH:4  RATE:1000Hz</text>
+  <text x="340" y="294" font-family="monospace" font-size="8" fill="#3A3A3A">LAT:2.4ms</text>
+  <text x="430" y="294" font-family="monospace" font-size="8" fill="#3A3A3A">PKT:44,821</text>
+  <text x="530" y="294" font-family="monospace" font-size="8" fill="#AFEE00">● LIVE</text>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="330" width="592" height="2" fill="#C97CFF" opacity="0.4"/>
+</svg>

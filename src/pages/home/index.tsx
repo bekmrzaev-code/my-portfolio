@@ -122,7 +122,7 @@ const HomePage = () => {
           </Card>
           <Link to='/project/01' className={styles.visualElement}>
             <T>SYSTEM_LOG: 0xFF12</T>
-            <img src='/images/image.png' alt='project' />
+            <img src='/images/system-log.svg' alt='project' />
           </Link>
         </div>
       </div>
@@ -143,7 +143,7 @@ const HomePage = () => {
           <ProjectCard
             desc='REAL-TIME BIOMETRIC DATA VIZUALIZATION ENGINE'
             year='2024'
-            photo='/images/projectOne.jpg'
+            photo='/images/project-neural.svg'
             color='violet'
             link='/projectOne'
           >
@@ -153,7 +153,7 @@ const HomePage = () => {
             desc='MINIMALIST TERMINAL-FIRST PORTFOLIO SYSTEM'
             year='2023'
             color='aqua'
-            photo='/images/projectOne.jpg'
+            photo='/images/project-void.svg'
             link='/projectTwo'
           >
             VOID_OS
