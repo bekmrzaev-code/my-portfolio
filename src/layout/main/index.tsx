@@ -3,7 +3,7 @@ import Navbar from '../navbar'
 import Footer from '../footer'
 
 import styles from './Main.module.css'
-import { AboutPage, HomePage, ProjectsPage } from '../../pages'
+import { AboutPage, HomePage, ProjectsPage, StreakPage, ProjectDetailPage } from '../../pages'
 import { Route, Routes } from 'react-router'
 
 const Main = () => {
@@ -14,8 +14,11 @@ const Main = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/streak" element={<div>Streak Page</div>} />
+          <Route path="/streak" element={<StreakPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/projectOne" element={<ProjectDetailPage projectId="projectOne" />} />
+          <Route path="/projectTwo" element={<ProjectDetailPage projectId="projectTwo" />} />
+          <Route path="/project/:id" element={<ProjectDetailPage />} />
         </Routes>
       </div>
       <Footer />
