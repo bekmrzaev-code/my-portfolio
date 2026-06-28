@@ -1,5 +1,1 @@
-export { default as HomePage } from './home'
-export { default as AboutPage } from './about'
-export { default as ProjectsPage } from './projects'
-export { default as StreakPage } from './streak'
-export { default as ProjectDetailPage } from './projectDetail'
+export { default as Home } from './home'

@@ -1,5 +1,0 @@
-export { default as T } from './typography'
-export { default as Button } from './button'
-export { default as IntroCard } from './introCard'
-export { default as CtaCard } from './ctaCard'
-export { default as projectCard } from './projectCard'
