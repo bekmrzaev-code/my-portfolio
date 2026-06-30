@@ -1,0 +1,25 @@
+.container {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+h1 {
+    display: flex;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+
+    li {
+        list-style: none;
+        border: 1px solid black;
+        padding: 3px 5px;
+        border-radius: 4px;
+        background-color: lightblue;
+    }
+}
