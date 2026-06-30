@@ -1,16 +1,18 @@
 .container {
+    height: 46px;
+    padding: 0px 22px;
+    border-radius: 14px;
+    background: linear-gradient(155deg, #26262B, #131316);
+    border: 1px solid gray;
     cursor: pointer;
-    padding: 3px 5px;
-    font-weight: 500;
-    color: rgb(23, 25, 70);
-    background-color: darkgrey;
-    border: 2px solid black;
-    transition: ease-in-out 0.2s;
-    font-size: 26px;
-    border-radius: 4px;
+    color: snow;
+    font-weight: 600;
 }
 
-.container:hover {
-    padding: 3px 10px;
-    box-shadow: 2px 4px 4px 2px rgba(1, 1, 1, 0.2);
+.glow {
+    background-color: #7c6cf6;
+    position: absolute;
+    inset: 14px;
+    filter: blur(38px);
+    opacity: 0.6px;
 }

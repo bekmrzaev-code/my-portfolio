@@ -6,10 +6,6 @@
     justify-content: center;
 }
 
-h1 {
-    display: flex;
-}
-
 ul {
     display: flex;
     list-style: none;
