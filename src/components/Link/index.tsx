@@ -3,7 +3,7 @@ import styles from './link.module.css'
 
 interface LinkProps {
     children: string;
-    link: string
+    link: string;
 }
 
 const Link: React.FC<LinkProps> = ({
@@ -12,7 +12,7 @@ const Link: React.FC<LinkProps> = ({
   return (
     <a 
     href={link}
-    className={styles.glow}
+    className={styles.container}
     >{children}</a>
   )
 }

@@ -1,8 +1,8 @@
-import React from 'react'
+// import React from 'react'
 import styles from "./home.module.css"
 import { Button, Card, Link, Typography } from '../../components'
 
-const index = () => {
+const Home = () => {
   return (
     <div className={styles.container}>
         <h1>Hello my name is abdurahmon</h1>
@@ -25,18 +25,23 @@ const index = () => {
           <li>blog 3</li>
         </ul>
         <p>My Socials</p>
-        <ul>
+        <div className={styles.socials}>
           <Button>Twitter</Button>
           <Button>Telegram</Button>
-          <Button>GitHub</Button>
           <Button>Linkedin</Button>
-        </ul>
-        <Typography>Text</Typography>
-        <Button>Button</Button>
+          <Button>GitHub</Button>
+        </div>
+        <Typography T='display' >Display</Typography>
+        <Typography T='heading'>Heading</Typography>
+        <Typography T='title' >Title</Typography>
+        <Typography T='body' >Body</Typography>
+        <Typography T='label'>Label</Typography>
+        <Typography T='caption'>Caption</Typography>
+        <Button variant='glow'>Button</Button>
         <Link link='/kun.uz'>Kun Uz</Link>
         <Card></Card>
     </div>
   )
 }
 
-export default index
+export default Home

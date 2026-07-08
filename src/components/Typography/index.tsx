@@ -2,14 +2,16 @@ import React from 'react'
 import styles from './typography.module.css'
 
 interface TypographyProps {
-  children: string;
+  children: React.ReactNode;
+  T?: 'display' | 'heading' | 'title' | 'body' | 'label' | 'caption'
 }
 
 const Typography: React.FC<TypographyProps> = ({
-  children
+  children, T
 }) => {
+  const type = T ? styles[T] || styles.font : styles.font
   return (
-    <p className={styles.text}>
+    <p className={type}>
       {children}
     </p>
   )

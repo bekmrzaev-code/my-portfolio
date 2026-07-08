@@ -1,3 +1,7 @@
+button:active {
+    transform: translateY(2px);
+}
+
 .container {
     height: 46px;
     padding: 0px 22px;
@@ -10,9 +14,24 @@
 }
 
 .glow {
-    background-color: #7c6cf6;
-    position: absolute;
-    inset: 14px;
-    filter: blur(38px);
-    opacity: 0.6px;
+    height: 46px;
+    padding: 0px 22px;
+    border-radius: 14px;
+    background: linear-gradient(155deg, #723EC3, #9FA1FF);
+    border: 1px solid gray;
+    cursor: pointer;
+    color: snow;
+    font-weight: 600;
+}
+
+.green {
+    background-color: #22c55e;
+    border: 1px solid #16a34a;
+    color: snow;
+}
+
+.blue {
+    background-color: #3b82f6;
+    border: 1px solid #2563eb;
+    color: snow;
 }

@@ -1,15 +1,23 @@
 import React from 'react'
 import styles from './button.module.css'
 
+type Variant = 'green' | 'blue' | 'glow'
+
 interface ButtonProps {
-    children: string;
+    children: React.ReactNode;
+    variant?: Variant;
 }
 
 const Button: React.FC<ButtonProps> = ({
-    children
+    children,
+    variant,
 }) => {
+  const buttonStyle = variant ? styles[variant] : styles.container
+
   return (
-    <button className={styles.container}>{children}</button>
+    <button className={buttonStyle}>
+      {children}
+    </button>
   )
 }
 
